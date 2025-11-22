@@ -1,0 +1,74 @@
+<div class="flex justify-center items-center w-full py-10 bg-emerald-600">
+    <form id="signup-form" class="space-y-4 p-8 rounded-lg shadow w-full max-w-md">
+
+        <h1 class="text-2xl font-bold py-10 text-gray-700">Registration Form</h1>
+
+        <!-- Full Name -->
+        <label class="block">
+            Full Name
+            <input 
+                id="fullname"
+                class="w-full border px-3 py-2 rounded focus:outline-none focus:ring focus:ring-indigo-300"
+            />
+        </label>
+
+        <!-- Email -->
+        <label class="block">
+            Email
+            <input 
+                id="email"
+                type="email"
+                class="w-full border px-3 py-2 rounded focus:outline-none focus:ring focus:ring-indigo-300"
+            />
+        </label>
+
+        <!-- Password -->
+        <label class="block">
+            Password
+            <div class="relative mt-1">
+                <input 
+                    id="password"
+                    type="password"
+                    class="w-full border px-3 py-2 rounded focus:outline-none focus:ring focus:ring-indigo-300"
+                />
+                <span 
+                    id="toggle-password"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600"
+                >👁️</span>
+            </div>
+        </label>
+
+        <!-- Confirm Password -->
+        <label class="block">
+            Confirm Password
+            <div class="relative mt-1">
+                <input 
+                    id="confirm-password"
+                    type="password"
+                    class="w-full border px-3 py-2 rounded focus:outline-none focus:ring focus:ring-indigo-300"
+                />
+                <span 
+                    id="toggle-confirm-password"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600"
+                >👁️</span>
+            </div>
+        </label>
+
+        <!-- Submit -->
+        <div class="flex justify-end items-end">
+            <button 
+            type="submit" 
+            class=" w-[150px] py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+        >
+            SIGN UP
+        </button>
+        </div>
+
+        <!-- Link -->
+        <p class="text-center py-7  font-semibold mt-4 cursor-pointer">
+            Already have an account?  
+            <span id="go-login" class="underline text-white">SIGN IN</span>
+        </p>
+
+    </form>
+</div>

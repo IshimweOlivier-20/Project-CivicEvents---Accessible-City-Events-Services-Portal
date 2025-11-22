@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML with Tailwind CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible City Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold text-blue-600">Welcome to Tailwind CSS</h1>
-        <p class="mt-4 text-gray-700">This is a basic HTML page with Tailwind CSS installed via CDN.</p>
-        <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click Me</button>
-    </div>
+
+
+  <div class="min-h-screen flex justify-center items-center">
+    <main id="auth-content" class="w-full max-w-lg"></main>
+  </div>
+
+  <!-- Load auth main JS -->
+  <script src="js/auth-main.js"></script>
+   <script src="auth/js/signup.js"></script>
+   <script src="auth/js/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<div class="flex justify-center items-center w-full py-10 bg-emerald-600">
+    <form id="event-form" class="space-y-4 p-8 rounded-lg shadow w-full max-w-md">
+        
+        <h1 class="text-2xl font-bold py-10 text-gray-700">Login Form</h1>
+
+        <!-- Email Input -->
+        <label class="block">
+            Email
+            <input 
+                id="email"
+                type="email"
+                class="w-full border px-3 py-2 rounded focus:outline-none focus:ring focus:ring-indigo-300"
+            />
+        </label>
+
+        <!-- Password Input -->
+        <label class="block">
+            Password
+            <div class="relative mt-1">
+                <input 
+                    id="password"
+                    type="password"
+                    class="w-full border px-3 py-2 rounded focus:outline-none focus:ring focus:ring-indigo-300"
+                />
+
+                <span 
+                    id="toggle-password"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600"
+                >👁️</span>
+            </div>
+        </label>
+
+        <!-- Submit -->
+         <div class="flex justify-end items-end">
+               <button 
+            type="submit" 
+            class="w-[150px] py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+        >
+            SIGN IN
+        </button>
+         </div>
+      
+
+        <!-- Link -->
+        <p class="text-center py-7 font-semibold mt-4 cursor-pointer">
+            You don't have an account?  
+            <span id="go-signup" class="underline text-white">SIGN UP</span>
+        </p>
+
+    </form>
+</div>
