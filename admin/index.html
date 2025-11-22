@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accessible City Events — Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <div id="sidebar-root"></div>
+
+    <!-- Main -->
+    <div class="flex-1 p-6">
+      <div id="header-root"></div>
+      <main id="main-content" class="mt-6"></main>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/storage.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/anns.js"></script>
+  <script src="js/promos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
