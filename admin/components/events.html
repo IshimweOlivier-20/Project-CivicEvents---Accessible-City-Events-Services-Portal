@@ -1,0 +1,56 @@
+<section aria-labelledby="events-heading">
+  <div class="flex items-center justify-between mb-4">
+      <h3 id="events-heading" class="text-lg font-medium">Events</h3>
+  </div>
+
+  <div id="events-list" class="space-y-4" aria-live="polite"></div>
+</section>
+
+<!-- EDIT EVENT MODAL -->
+<div id="edit-modal" 
+     class="fixed inset-0 bg-black bg-opacity-40 hidden flex justify-center items-center">
+  <div class="bg-white p-6 rounded shadow-xl w-full max-w-lg">
+
+    <h2 class="text-xl font-bold mb-4">Edit Event</h2>
+
+    <form id="edit-form" class="space-y-4">
+      <input type="hidden" id="edit-id">
+
+      <div>
+        <label>Title</label>
+        <input id="edit-title" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Description</label>
+        <textarea id="edit-description" class="w-full border p-2 rounded"></textarea>
+      </div>
+
+      <div>
+        <label>Location</label>
+        <input id="edit-location" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Starts At</label>
+        <input id="edit-starts" type="datetime-local" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Ends At</label>
+        <input id="edit-ends" type="datetime-local" class="w-full border p-2 rounded" />
+      </div>
+
+      <div class="flex justify-end gap-3">
+        <button type="button" id="cancel-edit" class="px-4 py-2 bg-gray-500 text-white rounded">
+          Cancel
+        </button>
+
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded">
+          Save Changes
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

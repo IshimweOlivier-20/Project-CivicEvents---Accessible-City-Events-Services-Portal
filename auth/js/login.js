@@ -21,7 +21,7 @@ $(document).on("submit", "#event-form", function (e) {
             const token = res.token || res.data?.token;
 
             if (token) {
-                localStorage.setItem("auth_token", token);
+                localStorage.setItem("token", token);
             } else {
                 console.error("No token returned:", res);
             }

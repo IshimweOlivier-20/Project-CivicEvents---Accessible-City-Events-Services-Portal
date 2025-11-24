@@ -12,11 +12,21 @@ $(function () {
 });
 
 // Load component content dynamically
+// main.js
 function loadPage(page) {
-    $("#main-content").load(`components/${page}.html`);
+    $("#main-content").load(`components/${page}.html`, function () {
+
+        // Call respective functions after page is loaded
+        if (page === "users") loadUsers();
+        if (page === "events") loadEvents();
+        if (page === "event-form") attachCreateEventForm();
+        if (page === "promos") loadPromos();  
+         if (page === "notify") loadNotifications(); 
+         if (page === "announc") loadAnnouncements(); 
+    });
 }
 
-// Attach button click events (runs AFTER sidebar loads)
+
 function attachSidebarEvents() {
     // For sidebar text buttons like Events, Users, Promos, Notifications
     $("button[data-page]").on("click", function () {
