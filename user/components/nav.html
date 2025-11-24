@@ -1,0 +1,79 @@
+<nav class="w-full flex justify-between items-center bg-white border-b border-gray-200 px-20 py-4 relative">
+  <h1 class="text-xl font-bold">City Event</h1>
+
+  <ul class="flex gap-6 text-gray-700 font-medium">
+    <li class="cursor-pointer hover:text-indigo-600" data-page="event">Events</li>
+    <li class="cursor-pointer hover:text-indigo-600" data-page="audio">Announcements (Audio)</li>
+    <li class="cursor-pointer hover:text-indigo-600" data-page="video">Promos (Video)</li>
+    <li class="cursor-pointer hover:text-indigo-600" data-page="feedback">Feedback</li>
+  </ul>
+
+  <div class="flex items-center gap-10 relative">
+    <div class="absolute -top-2 right-28 bg-yellow-600 w-5 h-5 flex items-center justify-center rounded-full">
+      <p id="notify-number" class="text-white text-xs"></p>
+    </div>
+
+    <button class="text-gray-700 hover:text-indigo-600">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M14.857 17.743A4.5 4.5 0 0112 19.5a4.5 4.5 0 
+          01-2.857-1.757M6 8.25a6 6 0 1112 0c0 2.577.438 
+          4.013 1.07 5.02.308.49.462.735.455.98a.75.75 
+          0 01-.313.583C18.387 15.75 16.36 16.5 12 
+          16.5s-6.387-.75-7.212-1.667a.75.75 0 
+          01-.313-.583c-.007-.245.147-.49.455-.98C5.562 
+          12.263 6 10.827 6 8.25z" />
+        </svg>
+    </button>
+
+    <div class="relative">
+      <p id="profileBtn" class="cursor-pointer hover:text-indigo-600 select-none">
+        My Profile
+      </p>
+
+      <div id="profileDropdown"
+        class="hidden absolute right-0 mt-2 w-40 bg-white shadow-lg border border-gray-200 rounded-md py-2 z-50">
+
+        <button id="edit-profile-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100">
+  Edit Profile
+</button>
+
+
+        <button id="logout-btn" class="w-full text-left px-4 py-2 hover:bg-gray-100">
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div id="edit-modal" 
+     class="fixed inset-0 bg-black bg-opacity-40 hidden flex justify-center items-center">
+  <div class="bg-white p-6 rounded shadow-xl w-full max-w-lg">
+
+    <h2 class="text-xl font-bold mb-4">Edit Profile</h2>
+
+    <form id="edit-form" class="space-y-4">
+      <input type="hidden" id="edit-id">
+
+      <div>
+        <label>Full Name</label>
+        <input id="edit-fullname" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Email</label>
+        <input id="edit-email" class="w-full border p-2 rounded"></input>
+      </div>
+
+
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded">
+          Save Changes
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

@@ -16,19 +16,29 @@ $(document).on("submit", "#event-form", function (e) {
         data: JSON.stringify({ email, password }),
 
         success: function (res) {
+            const token = res.data?.token;
+            const role = res.data?.user?.role;
 
-            // FIX: based on correct backend response
-            const token = res.token || res.data?.token;
-
-            if (token) {
-                localStorage.setItem("token", token);
-            } else {
+            if (!token) {
                 console.error("No token returned:", res);
+                alert("Login failed: No token received.");
+                return;
             }
+
+            // Save token and role
+            localStorage.setItem("token", token);
+            localStorage.setItem("role", role);
 
             alert(res.message || "Login successful!");
 
-            window.location.href = "/admin/index.html"; 
+           if (role === "admin") {
+    window.location.href = "/admin/index.html";
+} else if (role === "user") {
+    window.location.href = "/user/index.html";
+} else {
+    alert("Page not found for this role!");
+}
+
         },
 
         error: function (xhr) {

@@ -2,10 +2,12 @@ $(function () {
     // Load sidebar
     $("#sidebar-root").load("components/sidebar.html", function () {
         attachSidebarEvents(); // sidebar events load AFTER HTML inserts
+        clickLogo()
     });
 
     // Load header
     $("#header-root").load("components/header.html");
+    
 
     // Load default page
     loadPage("events");
@@ -46,4 +48,10 @@ function attachSidebarEvents() {
     $("#btn-new-promo").on("click", function () {
         loadPage("promo-form");
     });
+}
+
+function clickLogo (){
+    $('#logo').on("click", function(){
+        window.location.href="/"
+    })
 }
